@@ -12,8 +12,8 @@ class QuestionsController < ApplicationController
       @answer =  "Silly question, get dressed and go to work!"
     elsif @question.upcase != good_answer.upcase
       @answer = "I don't care, get dressed and go to work!"
-    else
-      return ""
+    else @question == good_answer
+      @answer = "Great!"
     end
 
   end
